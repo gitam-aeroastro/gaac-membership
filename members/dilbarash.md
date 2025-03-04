@@ -16,7 +16,7 @@
 
 - [ ] Astronomy & Astrophysics (StarGazers)  
 
-- [ ] Robotics & Hardware (ROBusta)  
+- [x] Robotics & Hardware (ROBusta)  
 
 - [ ] Programming & Software Development  
 
@@ -35,7 +35,3 @@
 ---
 
 
-
-✅ **Submit this file as a Pull Request in the `members/` folder of the GAAC repository.**  
-
-💡 **Your membership will be verified automatically through GitHub Actions!** 🚀
