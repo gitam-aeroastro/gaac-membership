@@ -16,13 +16,13 @@
 
 - [ ] Astronomy & Astrophysics (StarGazers)  
 
-- [x] Robotics & Hardware (ROBusta)  
+- [ ] Robotics & Hardware (ROBusta)  
 
 - [ ] Programming & Software Development  
 
-- [ ] Event Management & Outreach  
+- [x] Event Management & Outreach  
 
-- [ ] Research & Technical Writing  
+- [x] Research & Technical Writing  
 
 
 
