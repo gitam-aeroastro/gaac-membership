@@ -6,15 +6,14 @@
 **Department & Year:** Department of Computer Science and Engineering 3rd Year
 
 **Areas of Interest:**  
-- [ ] Astronomy & Astrophysics (StarGazers)  
-- [ ] Robotics & Hardware (ROBusta)  
-- [ ] Programming & Software Development  
-- [ ] Event Management & Outreach  
-- [ ] Research & Technical Writing  
+- [x] Astronomy & Astrophysics (StarGazers)  
+- [x] Robotics & Hardware (ROBusta)  
+- [x] Programming & Software Development  
+- [x] Event Management & Outreach  
+- [x] Research & Technical Writing  
 
 **Fun Fact About You:**  
-[Share something interesting about yourself!]  
-
+My sleep duration is shorter than the time the kernel spends training my model.
 ---
 
 ✅ **Submit this file as a Pull Request in the `members/` folder of the GAAC repository.**  
