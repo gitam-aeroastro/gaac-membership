@@ -1,0 +1,27 @@
+name: Membership Verification
+
+on:
+  pull_request:
+    paths:
+      - "members/*.md"
+
+jobs:
+  verify-membership:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Membership Format
+        run: |
+          for file in members/*.md; do
+            if ! grep -q "Name: " "$file" || ! grep -q "Email: " "$file" || ! grep -q "GitHub Username: " "$file"; then
+              echo "❌ Membership file $file is missing required fields."
+              exit 1
+            fi
+          done
+        shell: bash
+
+      - name: Approve Membership Registration
+        run: echo "✅ All membership files are correctly formatted."
