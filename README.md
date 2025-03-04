@@ -17,10 +17,10 @@ To become an official GAAC member and participate in club activities, follow the
 3. **Add your details** in the following format:  
 
     ```markdown
-    # 🚀 Sampath Varma Datla
-    - **GitHub Username:** AI-Mercenary
-    - **AAS ID** RB-2022-5-2
-    - **GITAM Email ID:** sdatla10@gitam.in
+    # 🚀 [Your Name]
+- **GitHub Username:** [your-username]  
+- **AAS ID** [Your ID here]
+- **GITAM Email ID:** [Your GITAM Email ID] 
     ```
 
 4. **Submit a Pull Request (PR)** with your markdown file.  
