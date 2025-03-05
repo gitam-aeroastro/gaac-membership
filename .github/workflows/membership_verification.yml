@@ -3,7 +3,7 @@ name: Membership Verification
 on:
   pull_request:
     paths:
-      - "members/*.md"
+      - "members/**"
 
 jobs:
   verify-membership:
@@ -11,17 +11,31 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Validate Membership Format
+      - name: Validate Membership File
         run: |
-          for file in members/*.md; do
-            if ! grep -q "Name: " "$file" || ! grep -q "Email: " "$file" || ! grep -q "GitHub Username: " "$file"; then
-              echo "❌ Membership file $file is missing required fields."
+          for file in members/*; do
+            # Skip README.md from validation
+            if [[ "$file" == "members/README.md" ]]; then
+              continue
+            fi
+
+            # Check if file is empty
+            if [[ ! -s "$file" ]]; then
+              echo "❌ Membership file $file is empty or missing required fields."
               exit 1
             fi
-          done
-        shell: bash
 
-      - name: Approve Membership Registration
-        run: echo "✅ All membership files are correctly formatted."
+            # Validate required fields
+            REQUIRED_FIELDS=("Name:" "GitHub Username:" "Email:")
+            for field in "${REQUIRED_FIELDS[@]}"; do
+              if ! grep -q "$field" "$file"; then
+                echo "❌ Membership file $file is missing required field: $field"
+                exit 1
+              fi
+            done
+          done
+
+      - name: Membership Verification Complete
+        run: echo "✅ All membership files are valid!"
