@@ -1,9 +1,9 @@
 # GAAC Membership Registration
 
-**Name:** Sampath Varma Datla
-**Email:** sdatla10@gitam.in 
-**GitHub Username:** AI-Mercenary  
-**Department & Year:** Department of Computer Science and Engineering 3rd Year
+Name: Sampath Varma Datla
+Email: sdatla10@gitam.in 
+GitHub Username: AI-Mercenary  
+Department & Year: Department of Computer Science and Engineering 3rd Year
 
 **Areas of Interest:**  
 - [x] Astronomy & Astrophysics (StarGazers)  
