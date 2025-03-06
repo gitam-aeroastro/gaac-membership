@@ -1,9 +1,9 @@
 # GAAC Membership Registration
 
-**Name:** [Your Full Name]  
-**Email:** [Your Email Address]  
-**GitHub Username:** [Your GitHub Username]  
-**Department & Year:** [Your Department & Year] 
+Name: [Your Full Name]  
+Email: [Your Email Address]  
+GitHub Username: [Your GitHub Username]  
+Department & Year: [Your Department & Year] 
 
 **Areas of Interest:**  
 - [ ] Astronomy & Astrophysics (StarGazers)  
