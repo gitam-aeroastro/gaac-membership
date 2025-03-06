@@ -21,11 +21,34 @@ jobs:
               continue
             fi
 
-            # Check required fields
-            if ! grep -q "Name: " "$file" || ! grep -q "Email: " "$file" || ! grep -q "GitHub Username: " "$file"; then
-              echo "❌ Membership file $file is missing required fields."
+            # Check for required fields
+            MISSING_FIELDS=()
+
+            if ! grep -q "Name: " "$file"; then
+              MISSING_FIELDS+=("Name")
+            fi
+
+            if ! grep -q "Email: " "$file"; then
+              MISSING_FIELDS+=("Email")
+            fi
+
+            if ! grep -q "GitHub Username: " "$file"; then
+              MISSING_FIELDS+=("GitHub Username")
+            fi
+
+            if ! grep -q "Department & Year: " "$file"; then
+              MISSING_FIELDS+=("Department & Year")
+            fi
+
+            # If any required fields are missing, print an error and exit
+            if [[ ${#MISSING_FIELDS[@]} -gt 0 ]]; then
+              echo "❌ Error: The following required fields are missing in '$file':"
+              for field in "${MISSING_FIELDS[@]}"; do
+                echo "   - $field"
+              done
               exit 1
             fi
+
           done
 
       - name: Membership Verification Complete
