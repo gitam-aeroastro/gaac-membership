@@ -17,7 +17,7 @@ jobs:
         run: |
           for file in members/*.md; do
             # Skip README.md from validation
-            if [[ "$file" == "members/README.md" ]]; then
+            if [[ "$file" == "members/README.md" || "$file" == "members/[your-username].md" || "$file" == "members/johndoe.md" ]]; then
               continue
             fi
 
